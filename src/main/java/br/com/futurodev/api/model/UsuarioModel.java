@@ -13,9 +13,10 @@ import java.util.Objects;
 @Table (name = "usuario")
 public class UsuarioModel {
 
+    //@SequenceGenerator(name= "seq_usuario", sequenceName = "seq_usuario", allocationSize = 1, initialValue = 1)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_usuario")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @SequenceGenerator(name= "seq_usuario", sequenceName = "seq_usuario")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(unique = true)

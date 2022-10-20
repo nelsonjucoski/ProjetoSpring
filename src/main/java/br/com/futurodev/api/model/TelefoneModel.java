@@ -9,9 +9,10 @@ import java.util.Objects;
 @Table(name= "telefone")
 public class TelefoneModel {
 
+    //@SequenceGenerator(name= "seq_telefone", sequenceName = "seq_telefone_sequencia, allocationSize = 1, initialValue = 1")
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_telefone")
     @Id
-    @SequenceGenerator(name= "seq_telefone", sequenceName = "seq_telefone")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String numero;
     private String tipo;

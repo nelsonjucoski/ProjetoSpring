@@ -6,12 +6,12 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "produto")
-@SequenceGenerator(name = "seq_produto", sequenceName = "seq_produto" , allocationSize = 1, initialValue = 1)
+//@SequenceGenerator(name = "seq_produto", sequenceName = "seq_produto" , allocationSize = 1, initialValue = 1)
+//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_produto")
 public class ProdutoModel implements Serializable {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_produto")
-
     @Column(name = "id")
     private Long id;
 

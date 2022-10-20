@@ -1,19 +1,20 @@
-package br.com.futurodev.api.dto;
+package br.com.futurodev.api.input;
 
-import br.com.futurodev.api.model.TelefoneModel;
+import br.com.futurodev.api.dto.TelefoneRepresentationModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioRepresentationModel {
+public class UsuarioInput {
     private Long id;
     private String nome;
     private String login;
+    private String senha;
 
     private List<TelefoneRepresentationModel> telefones = new ArrayList<TelefoneRepresentationModel>();
 
+    //Getters e Setters
 
-    /* Getter e Setters*/
 
     public List<TelefoneRepresentationModel> getTelefones() {
         return telefones;
@@ -45,5 +46,13 @@ public class UsuarioRepresentationModel {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
